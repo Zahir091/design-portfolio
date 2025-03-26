@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbright Clothing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white shadow-md z-50 navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/index.html" class="text-2xl font-bold gradient-text">ZK</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                <!-- Desktop menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/index.html" class="text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-home"></i>
+                        <span class="ml-1">Home</span>
+                    </a>
+                    <a href="/index.html#projects" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a>
+                    <a href="/index.html#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                    <a href="/index.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="/index.html" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
+                    <a href="/index.html#projects" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-project-diagram mr-2"></i>Projects
+                    </a>
+                    <a href="/index.html#about" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-user mr-2"></i>About
+                    </a>
+                    <a href="/index.html#contact" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-envelope mr-2"></i>Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Starbright Clothing</h1>
+            <p class="text-gray-600 mb-8 text-lg">A clean, intuitive e-commerce platform designed to simplify online shopping.</p>
+            <div class="flex gap-4 mb-8">
+                <a href="#" class="btn bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors inline-flex items-center">
+                    <i class="fab fa-figma mr-2"></i>
+                    View Figma Design
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-bold text-gray-900">Project Overview</h2>
+                    <p class="text-gray-600">Many fashion e-commerce sites overwhelm shoppers with cluttered layouts, endless product options, and a frustrating checkout process. Starbright Clothing was designed to change that.</p>
+                    <p class="text-gray-600">This e-commerce platform prioritizes a clean, intuitive shopping experience where users can easily find what they're looking for without feeling overloaded with information. By focusing on smart navigation, effortless filtering, and a simplified checkout process, Starbright Clothing makes online shopping faster, clearer, and more enjoyable.</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Key Features</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-filter text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Advanced Filtering & Sorting – Users can refine results by size, color, and price without page reloads.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-shopping-cart text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Quick Add-to-Cart – Items can be added directly from search results, reducing unnecessary navigation.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Streamlined Checkout – Fewer steps, clear payment options, and an easy-to-follow process minimize abandoned carts.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-user-circle text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Personalized Profile Hub – Order history, saved favorites, and payment methods are conveniently stored in one place.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery 
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Project Gallery</h2>
+            <div class="gallery-container relative">
+                <div class="gallery-slide active">
+                    <img src="j.png" alt="Starbright Design 1" class="w-full h-[600px] object-cover rounded-xl">
+                </div>
+                <div class="gallery-slide">
+                    <img src="j.png" alt="Starbright Design 2" class="w-full h-[600px] object-cover rounded-xl">
+                </div>
+                <div class="gallery-slide">
+                    <img src="i.png" alt="Starbright Design 3" class="w-full h-[600px] object-cover rounded-xl">
+                </div>
+                <button class="gallery-nav gallery-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="gallery-nav gallery-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="gallery-dots"></div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Problem Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Identifying the Problem</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Common E-Commerce Pain Points</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Cognitive Overload – Too much information upfront makes it difficult for users to make decisions.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Difficult Navigation – Complex menus and excessive clicks disrupt the browsing experience.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Complicated Checkout – A long, confusing checkout process leads to cart abandonment.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Project Goals</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Make shopping feel effortless, with a well-structured and intuitive layout.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Reduce unnecessary steps so users can browse and buy without frustration.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Improve product discoverability through efficient filtering and sorting options.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Optimize checkout speed and clarity to minimize drop-offs.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Solution</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">🌟 A Clean, User-Centered Shopping Experience</h3>
+                    <p class="text-gray-600">Instead of overwhelming users with excessive content, Starbright Clothing presents only the most relevant information at the right time.</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">🛍 Smart Product Discovery</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• A refined filtering system lets users adjust search results without page reloads.</li>
+                        <li>• Applied filters are displayed clearly below the search bar.</li>
+                        <li>• Quick product previews give users instant access to key details.</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">🛒 Frictionless Add-to-Cart & Checkout</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Quick Add feature allows users to add items from search results.</li>
+                        <li>• Cart pop-up confirms additions and provides an updated summary.</li>
+                        <li>• Streamlined checkout process reduces unnecessary steps.</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">🎨 Thoughtful UI Design Choices</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Minimalist white backgrounds keep focus on products.</li>
+                        <li>• Light blue accent color a strategic choice that conveys trust, energy, and a modern feel</li>
+                        <li>• Subtle grey borders provide structure.</li>
+                        <li>• Responsive hover effects enhance interactivity.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UI & Interaction Design -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">UI & Interaction Design</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">🖌 Color Palette & Typography</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• White backgrounds create an open, distraction-free space.</li>
+                        <li>• Light blue primary color draws attention to key actions.</li>
+                        <li>• Grey borders define sections subtly.</li>
+                        <li>• Black text ensures high contrast and readability.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">🖱 Enhancing Interactivity</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Hover effects on buttons provide instant visual feedback.</li>
+                        <li>• Minimal page transitions ensure smooth navigation.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Plans -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Future Plans – Expanding to a Seller Marketplace</h2>
+            <div class="bg-white rounded-2xl shadow-xl p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Upcoming Features for Sellers</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i class="fas fa-store text-blue-600 mt-1 mr-3"></i>
+                        <span class="text-gray-600">Simple product listing – A hassle-free onboarding process for new sellers.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-boxes text-blue-600 mt-1 mr-3"></i>
+                        <span class="text-gray-600">Inventory & order management – Easy tools to track stock levels and sales.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-paint-brush text-blue-600 mt-1 mr-3"></i>
+                        <span class="text-gray-600">Custom storefronts – Personalized branding options for each seller.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reflections -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Reflections & Next Steps</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Lessons Learned</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Reducing cognitive overload improves user confidence when browsing and purchasing.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Subtle design choices make a big difference in how effortless an interface feels.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">A clearer checkout flow can significantly reduce cart abandonment rates.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Future Improvements</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Expanding the personalization features to suggest products based on browsing history.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Implementing AI-powered styling recommendations for a more tailored shopping experience.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Enhancing mobile optimization to ensure the same seamless experience on any device.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400 text-lg">© 2024 Zahir Khan. All rights reserved.</p>
+                <div class="mt-8 space-x-8">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin text-3xl"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-behance text-3xl"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-dribbble text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

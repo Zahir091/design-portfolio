@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Need Food</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white shadow-md z-50 navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/index.html" class="text-2xl font-bold gradient-text">ZK</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                <!-- Desktop menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/index.html" class="text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-home"></i>
+                        <span class="ml-1">Home</span>
+                    </a>
+                    <a href="/index.html#projects" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a>
+                    <a href="/index.html#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                    <a href="/index.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="/index.html" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
+                    <a href="/index.html#projects" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-project-diagram mr-2"></i>Projects
+                    </a>
+                    <a href="/index.html#about" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-user mr-2"></i>About
+                    </a>
+                    <a href="/index.html#contact" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-envelope mr-2"></i>Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Need Food</h1>
+            <p class="text-gray-600 mb-8 text-lg">A mobile app connecting individuals with local food banks and volunteer opportunities.</p>
+            <div class="flex gap-4 mb-8">
+                <a href="#" class="btn bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors inline-flex items-center">
+                    <i class="fab fa-figma mr-2"></i>
+                    View Figma Design
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-bold text-gray-900">Project Overview</h2>
+                    <p class="text-gray-600">Food insecurity remains a pressing issue in New York City, leaving many without reliable access to nutritious meals. Need Food is a mobile app designed to bridge this gap by connecting individuals with local food banks, offering food ordering and delivery services, and providing volunteer opportunities.</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Key Features</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Find and request food from nearby food banks via pickup or delivery</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-hands-helping text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Sign up for volunteer opportunities at local organizations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-bell text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Stay updated on food bank events and community initiatives</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-heart text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Donate directly to support food assistance programs</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery 
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Project Gallery</h2>
+            <div class="gallery-container relative">
+                <div class="gallery-slide active">
+                    <img src="https://via.placeholder.com/1200x800" alt="Need Food Design 1" class="w-full h-[600px] object-cover rounded-xl">
+                </div>
+                <div class="gallery-slide">
+                    <img src="https://via.placeholder.com/1200x800" alt="Need Food Design 2" class="w-full h-[600px] object-cover rounded-xl">
+                </div>
+                <div class="gallery-slide">
+                    <img src="https://via.placeholder.com/1200x800" alt="Need Food Design 3" class="w-full h-[600px] object-cover rounded-xl">
+                </div>
+                <button class="gallery-nav gallery-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="gallery-nav gallery-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="gallery-dots"></div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Research Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Research & Insights</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Understanding the Problem</h3>
+                    <p class="text-gray-600 mb-4">To design a solution that truly addressed food insecurity, we explored:</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">The challenges people face in accessing food banks (e.g., transportation, limited hours, stigma).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">How food banks manage resources and serve their communities.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">The role of volunteers and donors in sustaining food assistance programs.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Key Takeaways</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Many individuals rely on food banks but struggle with transportation, making delivery an essential feature.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Volunteers play a crucial role, but there wasn't a simple way to sign up for opportunities.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Users wanted a way to track received food and plan meals based on available resources.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Solution</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">✅ Making Food More Accessible</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Users can locate food banks through a map or list view and filter based on location, services, and hours.</li>
+                        <li>• Pickup & delivery options ensure that those with transportation barriers can still receive food.</li>
+                        <li>• A dietary preferences feature helps users receive food that meets their needs.</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">🤝 Strengthening Volunteer & Community Involvement</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• A built-in volunteer hub makes it easy to find and sign up for opportunities.</li>
+                        <li>• A community feed allows users to stay informed about food bank events, share resources, and engage with others.</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">📊 Enhancing Food Management & Sustainability</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• A food tracking tool helps users log received food, monitor consumption, and plan meals.</li>
+                        <li>• Food banks can use this data to optimize inventory management and reduce food waste.</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">💙 Supporting Food Banks with Donations</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• A secure donation feature allows users to contribute directly to food banks and food assistance programs.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Design Process</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">User Flows & Wireframes</h3>
+                    <p class="text-gray-600 mb-4">We mapped out user journeys for different needs:</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-route text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Requesting Food – Users browse local food banks, request items, and choose between pickup or delivery.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-route text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Volunteering – Users find and sign up for shifts at food banks.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-route text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Community Engagement – A social feed allows users to share updates, resources, and support each other.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">UI Design & Accessibility</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-paint-brush text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">A clean, intuitive interface makes it easy for users of all backgrounds to navigate the app.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">A map and list view help users locate food banks quickly.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-utensils text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">The dietary preferences feature ensures users receive safe, suitable food options.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features & Impact -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Features & Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">🛒 Food Access Made Simple</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Users can search for nearby food banks, filter results by location and available services.</li>
+                        <li>• Order food for pickup or delivery.</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">📌 Volunteer & Community Engagement</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Beyond just accessing food, Need Food empowers users to get involved.</li>
+                        <li>• Sign up for volunteer opportunities and stay informed about events.</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">📊 Food Tracking & Dietary Preferences</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• A food tracking tool helps users log received food items.</li>
+                        <li>• Monitor consumption and plan meals effectively.</li>
+                        <li>• Set dietary restrictions to ensure appropriate food options.</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">💙 Donations & Support</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• A secure donation feature enables users to contribute directly to food banks.</li>
+                        <li>• Help sustain these vital services.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reflections -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Reflections & Next Steps</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Lessons Learned</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Accessibility was a major consideration, ensuring that those with limited digital literacy could still navigate the app.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Community engagement features helped shift the focus from just food distribution to building a support network.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Future Improvements</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Expand features to support more cities beyond NYC.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Introduce AI-powered meal recommendations based on available food bank inventory.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400 text-lg">© 2024 Zahir Khan. All rights reserved.</p>
+                <div class="mt-8 space-x-8">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin text-3xl"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-behance text-3xl"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-dribbble text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

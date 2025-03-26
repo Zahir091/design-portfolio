@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahir Khan Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white shadow-md z-50 navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold gradient-text">ZK</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#projects" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#projects" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Projects</a>
+                <a href="#about" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">About</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="landing-section">
+        <div class="landing-content">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 animate-fade-in">
+                Hi, I'm <span class="gradient-text">Zahir Khan</span>
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.2s">
+                A passionate UX/UI Product Designer focused on creating innovative and user-centered solutions
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style="animation-delay: 0.4s">
+                <a href="#projects" class="btn text-white px-8 py-4 rounded-full hover:bg-blue-700 transition duration-300 inline-flex items-center justify-center">
+                    View My Work
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            <div class="mt-12 flex justify-center space-x-6 animate-fade-in" style="animation-delay: 0.6s">
+                <a href="#" class="social-icon text-gray-600 hover:text-blue-600">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="#" class="social-icon text-gray-600 hover:text-blue-600">
+                    <i class="fab fa-behance text-2xl"></i>
+                </a>
+                <a href="#" class="social-icon text-gray-600 hover:text-blue-600">
+                    <i class="fab fa-dribbble text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 bg-white section-transition">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-gray-900 mb-16 text-center">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Starbright Clothing Project -->
+                <div class="project-card">
+                    <div class="relative overflow-hidden">
+                        <img src="index.png" alt="Starbright Clothing" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Starbright Clothing</h3>
+                        <p class="text-gray-600 mb-6 text-lg">A clean, intuitive e-commerce platform designed to simplify online shopping.</p>
+                        <a href="starbright.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center group text-lg">
+                            View Project
+                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Need Food Project -->
+                <div class="project-card" data-project="needfood">
+                    <div class="relative overflow-hidden">
+                        <img src="d.png" alt="Need Food" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Need Food</h3>
+                        <p class="text-gray-600 mb-6 text-lg">A mobile app connecting individuals with local food banks and volunteer opportunities.</p>
+                        <a href="needfood.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center group text-lg">
+                            View Project
+                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 section-transition">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-gray-900 mb-16 text-center">About Me</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-card-content">
+                        <i class="fas fa-paint-brush about-icon"></i>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Design Philosophy</h3>
+                        <p class="text-gray-600 text-lg">
+                            I believe in creating designs that are not just visually appealing but also solve real user problems. My approach combines creativity with analytical thinking.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-content">
+                        <i class="fas fa-lightbulb about-icon"></i>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Innovation</h3>
+                        <p class="text-gray-600 text-lg">
+                            I'm constantly exploring new technologies and design trends to create cutting-edge solutions that push the boundaries of what's possible.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-content">
+                        <i class="fas fa-users about-icon"></i>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">User-Centered</h3>
+                        <p class="text-gray-600 text-lg">
+                            Every design decision I make is based on user research and feedback, ensuring that the end product meets real user needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 bg-white section-transition">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-gray-900 mb-16 text-center">Get in Touch</h2>
+            <div class="max-w-xl mx-auto">
+                <form class="space-y-6 bg-white rounded-2xl shadow-xl p-8 glass-effect">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn w-full text-white px-6 py-4 rounded-xl hover:bg-blue-700 transition duration-300">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400 text-lg">© 2024 Zahir Khan. All rights reserved.</p>
+                <div class="mt-8 space-x-8">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin text-3xl"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-behance text-3xl"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-dribbble text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
