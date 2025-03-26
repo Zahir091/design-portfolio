@@ -20,8 +20,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+                behavior: 'smooth'
             });
             // Close mobile menu after clicking
             mobileMenu.classList.add('hidden');
@@ -29,24 +28,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission handling with animation
+// Form submission handling
 const contactForm = document.querySelector('form');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+        
+        // Add loading state
+        const submitButton = this.querySelector('button[type="submit"]');
+        const originalText = submitButton.innerHTML;
         submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+        submitButton.disabled = true;
         
         // Simulate form submission
         setTimeout(() => {
             submitButton.innerHTML = '<i class="fas fa-check mr-2"></i>Sent!';
-            submitButton.classList.remove('opacity-50', 'cursor-not-allowed');
-            contactForm.reset();
-            
-            // Reset button after 2 seconds
             setTimeout(() => {
-                submitButton.innerHTML = 'Send Message';
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+                this.reset();
             }, 2000);
         }, 1500);
     });
@@ -186,7 +186,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-// Add ripple effect to buttons
+/* Add ripple effect to buttons
 document.querySelectorAll('.btn').forEach(button => {
     button.addEventListener('click', function(e) {
         const ripple = document.createElement('span');
@@ -203,6 +203,6 @@ document.querySelectorAll('.btn').forEach(button => {
         
         this.appendChild(ripple);
         
-        setTimeout(() => ripple.remove(), 600);
+        setTimeout(() => ripple.remove(), 10);
     });
-}); 
+}); */
