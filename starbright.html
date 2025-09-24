@@ -25,27 +25,68 @@
                 </div>
                 <!-- Desktop menu -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="/index.html" class="text-gray-600 hover:text-blue-600 transition-colors">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors">
                         <span>Home</span>
                     </a>
-                    <a href="/index.html#projects" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a>
-                    <a href="/index.html#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
-                    <a href="/index.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                    <div class="relative group">
+                        <span class="text-gray-600 hover:text-blue-600 transition-colors cursor-pointer">Projects</span>
+                        <!-- Project Dropdown -->
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="starbright.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors bg-blue-50">
+                                    <div class="flex items-center">
+                                        <img src="cover1.png" alt="Starbright" class="w-8 h-8 rounded object-cover mr-3">
+                                        <div>
+                                            <div class="font-medium">Starbright Clothing</div>
+                                            <div class="text-sm text-gray-500">E-commerce Platform</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="needfood.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                                    <div class="flex items-center">
+                                        <img src="cover2.png" alt="Need Food" class="w-8 h-8 rounded object-cover mr-3">
+                                        <div>
+                                            <div class="font-medium">Need Food</div>
+                                            <div class="text-sm text-gray-500">Mobile App</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="calendar.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                                    <div class="flex items-center">
+                                        <img src="https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=JC" alt="Journey Calendar" class="w-8 h-8 rounded object-cover mr-3">
+                                        <div>
+                                            <div class="font-medium">Journey Calendar</div>
+                                            <div class="text-sm text-gray-500">Time Management System</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                    <a href="index.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
                 </div>
             </div>
             <!-- Mobile menu -->
             <div id="mobile-menu" class="hidden md:hidden">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="/index.html" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
+                    <a href="index.html" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
                         <i class="fas fa-home mr-2"></i>Home
                     </a>
-                    <a href="/index.html#projects" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
-                        <i class="fas fa-project-diagram mr-2"></i>Projects
+                    <div class="px-3 py-2 text-gray-600 font-medium">Projects</div>
+                    <a href="starbright.html" class="block px-6 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors bg-blue-50">
+                        <i class="fas fa-shopping-bag mr-2"></i>Starbright Clothing
                     </a>
-                    <a href="/index.html#about" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
+                    <a href="needfood.html" class="block px-6 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
+                        <i class="fas fa-utensils mr-2"></i>Need Food
+                    </a>
+                    <a href="calendar.html" class="block px-6 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
+                        <i class="fas fa-calendar-alt mr-2"></i>Journey Calendar
+                    </a>
+                    <a href="index.html#about" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
                         <i class="fas fa-user mr-2"></i>About
                     </a>
-                    <a href="/index.html#contact" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
+                    <a href="index.html#contact" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
                         <i class="fas fa-envelope mr-2"></i>Contact
                     </a>
                 </div>

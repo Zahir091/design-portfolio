@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey Calendar System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white shadow-md z-50 navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/index.html" class="text-2xl font-bold gradient-text">ZK</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                <!-- Desktop menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600 transition-colors">
+                        <span>Home</span>
+                    </a>
+                    <div class="relative group">
+                        <span class="text-gray-600 hover:text-blue-600 transition-colors cursor-pointer">Projects</span>
+                        <!-- Project Dropdown -->
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="starbright.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                                    <div class="flex items-center">
+                                        <img src="cover1.png" alt="Starbright" class="w-8 h-8 rounded object-cover mr-3">
+                                        <div>
+                                            <div class="font-medium">Starbright Clothing</div>
+                                            <div class="text-sm text-gray-500">E-commerce Platform</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="needfood.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                                    <div class="flex items-center">
+                                        <img src="cover2.png" alt="Need Food" class="w-8 h-8 rounded object-cover mr-3">
+                                        <div>
+                                            <div class="font-medium">Need Food</div>
+                                            <div class="text-sm text-gray-500">Mobile App</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="calendar.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors bg-blue-50">
+                                    <div class="flex items-center">
+                                        <img src="https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=JC" alt="Journey Calendar" class="w-8 h-8 rounded object-cover mr-3">
+                                        <div>
+                                            <div class="font-medium">Journey Calendar</div>
+                                            <div class="text-sm text-gray-500">Time Management System</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                    <a href="index.html#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
+                    <div class="px-3 py-2 text-gray-600 font-medium">Projects</div>
+                    <a href="starbright.html" class="block px-6 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
+                        <i class="fas fa-shopping-bag mr-2"></i>Starbright Clothing
+                    </a>
+                    <a href="needfood.html" class="block px-6 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
+                        <i class="fas fa-utensils mr-2"></i>Need Food
+                    </a>
+                    <a href="calendar.html" class="block px-6 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors bg-blue-50">
+                        <i class="fas fa-calendar-alt mr-2"></i>Journey Calendar
+                    </a>
+                    <a href="index.html#about" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-user mr-2"></i>About
+                    </a>
+                    <a href="index.html#contact" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">
+                        <i class="fas fa-envelope mr-2"></i>Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Journey Calendar System</h1>
+            <p class="text-gray-600 mb-8 text-lg">A comprehensive time management system designed for Journey, Cambio Labs' gamified learning platform, to help instructors and students organize lessons, deadlines, and meetings in a visual, intuitive way.</p>
+            <div class="flex gap-4 mb-8">
+                <a href="#" target="_blank" class="btn bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors inline-flex items-center">
+                    <i class="fab fa-figma mr-2"></i>
+                    View Figma Design
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <h2 class="text-2xl font-bold text-gray-900">Project Overview</h2>
+                    <p class="text-gray-600">Journey by Cambio Labs is an innovative gamified learning platform that transforms education through engaging elements like points systems, achievements, and interactive competition. The platform has successfully enhanced learning experiences across Brooklyn, the Bronx, Manhattan, and San Francisco. While Journey excels in gamification and student engagement, there's an opportunity to further enhance the platform with comprehensive time management capabilities. This calendar system builds upon Journey's strong foundation by introducing visual time management tools that seamlessly integrate with the existing gamified learning environment.</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Key Features</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-calendar-alt text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Calendar views with monthly and weekly formats featuring color coded events and assignments</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-list text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Upcoming deadlines list organized by priority and urgency</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-users text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Meeting creation and scheduling tools designed specifically for instructors</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-lock text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Automated lesson lock and unlock date system for structured progression</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-trophy text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Gamified progress tracking system with reward mechanisms for student engagement</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery Placeholder 
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Project Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                    <div class="w-full h-64 bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
+                        <i class="fas fa-image text-gray-400 text-4xl"></i>
+                    </div>
+                    <p class="text-gray-600">Calendar Interface Design</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                    <div class="w-full h-64 bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
+                        <i class="fas fa-image text-gray-400 text-4xl"></i>
+                    </div>
+                    <p class="text-gray-600">Student Progress Tracker</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                    <div class="w-full h-64 bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
+                        <i class="fas fa-image text-gray-400 text-4xl"></i>
+                    </div>
+                    <p class="text-gray-600">Instructor Dashboard</p>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Problem Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Identifying the Problem</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Current System Limitations</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Journey lacks a time and deadline system for assignments, making progress tracking challenging</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Students have no visibility into instructor created class schedules, creating communication gaps</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">No visual calendar interface exists for class meeting times despite having attendance tracking</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">The current repeat system for class dates creates scheduling difficulties for instructors</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">User Pain Points</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Students struggle with time management without visual deadline tracking capabilities</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Instructors require external tools to coordinate lesson timing and monitor student progress</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">No mechanism exists to connect lessons to specific times and dates for structured learning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-red-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Limited flexibility between in-person, remote, and asynchronous learning modes</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Solution</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">📅 Visual Calendar Management</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Monthly and weekly calendar views with color coded events for easy identification</li>
+                        <li>• Interactive calendar interface allowing users to click on dates for detailed event information</li>
+                        <li>• Filter system enabling students and instructors to view events by specific courses or all courses</li>
+                        <li>• Search functionality for quickly finding specific events and assignment deadlines</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">🎯 Gamified Progress Tracking</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Next Steps Progress List replaces traditional todo lists with milestone based tracking</li>
+                        <li>• Reward system with gems and bonuses for completing tasks within suggested timeframes</li>
+                        <li>• Personalized progress tracking that adapts to individual learning pace</li>
+                        <li>• AI powered suggestions for optimal learning schedules and priorities</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">⏰ Flexible Time Management</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Lesson lock and unlock automation system for structured course progression</li>
+                        <li>• Meeting creation tools with timezone support for global accessibility</li>
+                        <li>• Personal reminder system for both students and instructors</li>
+                        <li>• Integration with existing class schedule system for seamless workflow</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">🌍 Multi-Modal Learning Support</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Adaptable interface supporting in-person, remote, and asynchronous learning</li>
+                        <li>• UTC based global time system for synchronized scheduling across timezones</li>
+                        <li>• Flexible deadline system accommodating different learning styles and paces</li>
+                        <li>• Instructor tools for managing multiple courses and coordinating with students</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Process -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Design Process</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">User Research & Journey Mapping</h3>
+                    <p class="text-gray-600 mb-4">The design process involved analyzing the needs of different user types:</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-user-graduate text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Students require visual deadline tracking and flexible progress management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chalkboard-teacher text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Instructors need tools for scheduling, coordination, and curriculum management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-globe text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Global accessibility considerations for timezone differences and learning modes</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Interface Design & User Experience</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-palette text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Color coded calendar system for intuitive event categorization and quick recognition</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-mobile-alt text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Responsive design ensuring consistent experience across desktop and mobile devices</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-magic text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Gamification elements integrated seamlessly to motivate without overwhelming users</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Challenges & Considerations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">🌐 Timezone Complexity</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Managing global time synchronization across different student locations</li>
+                        <li>• Balancing flexible deadlines with structured learning progression</li>
+                        <li>• Ensuring consistent experience for both synchronous and asynchronous learning</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">⚖️ Flexibility vs. Structure</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Creating a system that supports both guided instruction and self-paced learning</li>
+                        <li>• Balancing instructor control with student autonomy in time management</li>
+                        <li>• Designing gamification that motivates without creating pressure or overwhelm</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">🔄 System Integration</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Seamlessly integrating with existing Journey platform features and workflows</li>
+                        <li>• Maintaining consistency across different course types and delivery methods</li>
+                        <li>• Ensuring scalability for multiple instructors and large student populations</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">🎯 User Adoption</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Creating intuitive interfaces that require minimal learning curve</li>
+                        <li>• Ensuring the system adds value without disrupting existing workflows</li>
+                        <li>• Providing clear benefits for both instructors and students to encourage adoption</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Benefits & Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">👨‍🎓 For Students</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Visual time management tools help prioritize assignments and track progress</li>
+                        <li>• Gamified system motivates completion while reducing deadline stress</li>
+                        <li>• Flexible learning options accommodate different learning styles and schedules</li>
+                        <li>• Clear visibility into course schedules and instructor expectations</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">👨‍🏫 For Instructors</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Streamlined scheduling and curriculum management across multiple courses</li>
+                        <li>• Better coordination with students through shared calendar visibility</li>
+                        <li>• Automated lesson progression system reduces manual administrative tasks</li>
+                        <li>• Enhanced ability to support both synchronous and asynchronous learning modes</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">🏫 For Educational Institutions</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Improved student engagement and completion rates through better time management</li>
+                        <li>• Reduced administrative burden on instructors through automation</li>
+                        <li>• Enhanced support for diverse learning delivery methods</li>
+                        <li>• Better data insights into student progress and engagement patterns</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl shadow-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">🌍 Global Accessibility</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• UTC based system ensures consistent experience across timezones</li>
+                        <li>• Flexible scheduling supports international student populations</li>
+                        <li>• Scalable architecture accommodates growing user bases</li>
+                        <li>• Multi-language support potential for global educational institutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reflections & Next Steps -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Reflections & Next Steps</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Lessons Learned</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Timezone management requires careful consideration for global educational platforms</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Gamification elements must balance motivation with user autonomy</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-lightbulb text-yellow-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Visual calendar interfaces significantly improve time management for students</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Future Improvements</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Mobile app development for enhanced accessibility and notifications</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Advanced AI features for predictive scheduling and personalized learning paths</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Analytics dashboard for tracking engagement and completion rates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-arrow-right text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Community features for peer learning and collaborative time management</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400 text-lg">© 2025 Zahir Khan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

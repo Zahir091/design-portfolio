@@ -17,7 +17,41 @@
                     <a href="index.html" class="text-2xl font-bold gradient-text">ZK</a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#projects" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a>
+                    <div class="relative group">
+                        <span class="text-gray-600 hover:text-blue-600 transition-colors cursor-pointer">Projects</span>
+                        <!-- Project Dropdown -->
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="starbright.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                                    <div class="flex items-center">
+                                        <img src="cover1.png" alt="Starbright" class="w-8 h-8 rounded object-cover mr-3">
+                                        <div>
+                                            <div class="font-medium">Starbright Clothing</div>
+                                            <div class="text-sm text-gray-500">E-commerce Platform</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="needfood.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                                    <div class="flex items-center">
+                                        <img src="cover2.png" alt="Need Food" class="w-8 h-8 rounded object-cover mr-3">
+                                        <div>
+                                            <div class="font-medium">Need Food</div>
+                                            <div class="text-sm text-gray-500">Mobile App</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="calendar.html" class="block px-4 py-3 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors">
+                                    <div class="flex items-center">
+                                        <img src="https://via.placeholder.com/32x32/4F46E5/FFFFFF?text=JC" alt="Journey Calendar" class="w-8 h-8 rounded object-cover mr-3">
+                                        <div>
+                                            <div class="font-medium">Journey Calendar</div>
+                                            <div class="text-sm text-gray-500">Time Management System</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
                     <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
                 </div>
@@ -31,7 +65,16 @@
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#projects" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Projects</a>
+                <div class="px-3 py-2 text-gray-600 font-medium">Projects</div>
+                <a href="starbright.html" class="block px-6 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
+                    <i class="fas fa-shopping-bag mr-2"></i>Starbright Clothing
+                </a>
+                <a href="needfood.html" class="block px-6 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
+                    <i class="fas fa-utensils mr-2"></i>Need Food
+                </a>
+                <a href="calendar.html" class="block px-6 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">
+                    <i class="fas fa-calendar-alt mr-2"></i>Journey Calendar
+                </a>
                 <a href="#about" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">About</a>
                 <a href="#contact" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">Contact</a>
             </div>
@@ -71,7 +114,7 @@
     <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 bg-white section-transition">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-4xl font-bold text-gray-900 mb-16 text-center">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 <!-- Starbright Clothing Project -->
                 <div class="project-card">
                     <div class="relative overflow-hidden">
@@ -97,6 +140,21 @@
                         <h3 class="text-2xl font-bold text-gray-900 mb-4">Need Food</h3>
                         <p class="text-gray-600 mb-6 text-lg">A mobile app connecting individuals with local food banks and volunteer opportunities.</p>
                         <a href="needfood.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center group text-lg">
+                            View Project
+                            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Journey Calendar System Project -->
+                <div class="project-card">
+                    <div class="relative overflow-hidden">
+                        <img src="https://via.placeholder.com/400x256/4F46E5/FFFFFF?text=Journey+Calendar" alt="Journey Calendar System" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Journey Calendar System</h3>
+                        <p class="text-gray-600 mb-6 text-lg">A comprehensive time management system for Journey's gamified learning platform.</p>
+                        <a href="calendar.html" class="text-blue-600 hover:text-blue-800 inline-flex items-center group text-lg">
                             View Project
                             <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
                         </a>
